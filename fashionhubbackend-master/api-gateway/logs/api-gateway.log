@@ -1,0 +1,58 @@
+2025-07-12 02:13:50.265 [main] INFO  [c.n.apigateway.ApiGatewayApplication] - Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 10348 (C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar started by hparichha in C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\api-gateway)
+2025-07-12 02:13:50.272 [main] INFO  [c.n.apigateway.ApiGatewayApplication] - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 02:13:52.973 [main] INFO  [o.s.cloud.context.scope.GenericScope] - BeanFactory id=aad08c07-2ad5-31ba-8e7f-106975b42ebe
+2025-07-12 02:13:53.143 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-07-12 02:13:53.148 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-07-12 02:13:53.150 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-07-12 02:13:53.153 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-07-12 02:13:53.156 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-07-12 02:13:54.817 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:56.759 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:57.347 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [After]
+2025-07-12 02:13:57.347 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Before]
+2025-07-12 02:13:57.348 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Between]
+2025-07-12 02:13:57.348 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Cookie]
+2025-07-12 02:13:57.348 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Header]
+2025-07-12 02:13:57.348 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Host]
+2025-07-12 02:13:57.349 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Method]
+2025-07-12 02:13:57.351 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Path]
+2025-07-12 02:13:57.351 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Query]
+2025-07-12 02:13:57.351 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [ReadBody]
+2025-07-12 02:13:57.352 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [RemoteAddr]
+2025-07-12 02:13:57.352 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-07-12 02:13:57.353 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [Weight]
+2025-07-12 02:13:57.353 [main] INFO  [o.s.c.g.r.RouteDefinitionRouteLocator] - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-07-12 02:13:59.317 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:59.437 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-12 02:13:59.553 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Initializing Eureka in region us-east-1
+2025-07-12 02:13:59.568 [main] INFO  [c.n.d.s.r.aws.ConfigClusterResolver] - Resolving eureka endpoints via configuration
+2025-07-12 02:13:59.590 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Disable delta property : false
+2025-07-12 02:13:59.591 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Single vip registry refresh property : null
+2025-07-12 02:13:59.592 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Force full registry fetch : false
+2025-07-12 02:13:59.593 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Application is null : false
+2025-07-12 02:13:59.593 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Registered Applications size is zero : true
+2025-07-12 02:13:59.594 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Application version is -1: true
+2025-07-12 02:13:59.594 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Getting all instance registry info from the eureka server
+2025-07-12 02:14:00.570 [main] INFO  [c.netflix.discovery.DiscoveryClient] - The response status is 200
+2025-07-12 02:14:00.578 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Starting heartbeat executor: renew interval is: 30
+2025-07-12 02:14:00.586 [main] INFO  [c.n.discovery.InstanceInfoReplicator] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-07-12 02:14:00.595 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Discovery Client initialized at timestamp 1752266640594 with initial instances count: 0
+2025-07-12 02:14:00.607 [main] INFO  [c.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1752266640607, current=UP, previous=STARTING]
+2025-07-12 02:14:00.616 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [c.netflix.discovery.DiscoveryClient] - DiscoveryClient_API-GATEWAY/localhost:api-gateway:8000: registering service...
+2025-07-12 02:14:01.173 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [c.netflix.discovery.DiscoveryClient] - DiscoveryClient_API-GATEWAY/localhost:api-gateway:8000 - registration status: 204
+2025-07-12 02:14:01.536 [main] INFO  [o.s.b.w.e.netty.NettyWebServer] - Netty started on port 8000
+2025-07-12 02:14:02.862 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:14:04.093 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:14:04.168 [main] INFO  [c.n.apigateway.ApiGatewayApplication] - Started ApiGatewayApplication in 16.518 seconds (process running for 17.76)
+2025-07-12 02:14:27.309 [reactor-http-nio-2] WARN  [o.s.c.l.core.RoundRobinLoadBalancer] - No servers available for service: product-management-service
+2025-07-12 02:14:27.818 [reactor-http-nio-2] WARN  [o.s.c.l.core.RoundRobinLoadBalancer] - No servers available for service: product-management-service
+2025-07-12 02:14:30.440 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Disable delta property : false
+2025-07-12 02:14:30.441 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Single vip registry refresh property : null
+2025-07-12 02:14:30.441 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Force full registry fetch : false
+2025-07-12 02:14:30.441 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Application is null : false
+2025-07-12 02:14:30.442 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Registered Applications size is zero : true
+2025-07-12 02:14:30.442 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Application version is -1: false
+2025-07-12 02:14:30.442 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - Getting all instance registry info from the eureka server
+2025-07-12 02:14:30.454 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  [c.netflix.discovery.DiscoveryClient] - The response status is 200
+2025-07-12 02:15:55.695 [reactor-http-nio-2] WARN  [o.s.c.l.core.RoundRobinLoadBalancer] - No servers available for service: product-management-service
+2025-07-12 02:15:55.762 [reactor-http-nio-2] WARN  [o.s.c.l.core.RoundRobinLoadBalancer] - No servers available for service: product-management-service

@@ -1,0 +1,14 @@
+2025-07-12 02:12:52.238 [main] INFO  [c.n.e.EurekaServerApplication] - Starting EurekaServerApplication v0.0.1-SNAPSHOT using Java 17.0.2 on BBSR-LW-18-0056 with PID 1912 (C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\eureka-server\target\eureka-server-0.0.1-SNAPSHOT.jar started by hparichha in C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\eureka-server)
+2025-07-12 02:12:52.246 [main] INFO  [c.n.e.EurekaServerApplication] - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 02:12:53.985 [main] INFO  [o.s.cloud.context.scope.GenericScope] - BeanFactory id=3e248556-b6ed-3feb-89f3-8ae2ef168458
+2025-07-12 02:12:54.537 [main] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port(s): 8761 (http)
+2025-07-12 02:12:54.672 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2311 ms
+2025-07-12 02:12:55.874 [main] INFO  [c.s.j.s.i.a.WebApplicationImpl] - Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2025-07-12 02:12:59.844 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:01.437 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:01.583 [main] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-12 02:13:01.734 [main] WARN  [c.n.eureka.cluster.PeerEurekaNodes] - The replica size seems to be empty. Check the route 53 DNS Registry
+2025-07-12 02:13:01.844 [main] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-12 02:13:01.980 [main] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port(s): 8761 (http) with context path ''
+2025-07-12 02:13:03.195 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:03.245 [main] INFO  [c.n.e.EurekaServerApplication] - Started EurekaServerApplication in 13.324 seconds (JVM running for 14.273)

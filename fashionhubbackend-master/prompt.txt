@@ -1,0 +1,247 @@
+Data Base Schemas:
+
+1)Cart and CheckOut:
+
+DROP DATABASE IF EXISTS cart_and_checkout_db;
+GO
+ 
+Create Database cart_and_checkout_db;
+GO
+ 
+USE cart_and_checkout_db;
+GO
+
+CREATE TABLE shopping_cart(
+	[cart_id] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[user_id] [int] NOT NULL,
+	[cart_total] [decimal](10, 2) DEFAULT ((0.00)) NULL,
+	[created_date] [datetime] NOT NULL,
+	[last_updated_date] [datetime] NOT NULL
+);
+
+CREATE TABLE cart_items(
+	[id] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[cart_id] [int] NOT NULL,
+	[product_id] [int] NOT NULL,
+	[sku] [varchar](50) NOT NULL,
+	[size] [varchar](50) NOT NULL,
+	[quantity] [int] NOT NULL,
+	[unit_price] [decimal](10, 2) NOT NULL,
+	[discount] [decimal](10, 2) NOT NULL,
+	[final_price] [decimal](10, 2) NOT NULL,
+	[is_saved_for_later] [bit] NULL,
+	CONSTRAINT [FK_CartItems_ShoppingCart] FOREIGN KEY([cart_id]) REFERENCES shopping_cart([cart_id])
+);
+
+
+CREATE TABLE user_addresses(
+	[id] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	[user_id] [int] NOT NULL,
+	[address_lane_1] [varchar](255) NOT NULL,
+	[address_lane_2] [varchar](255) NULL,
+	[zipcode] [varchar](10) NOT NULL,
+	[state] [varchar](100) NULL,
+	[country] [varchar](100) NULL,
+	[address_type] [varchar](50) NULL DEFAULT ('BILLING'),
+	[contact_name] [varchar](200) NULL,
+	[contact_phone_number] [varchar](15) NULL
+);
+
+
+2)User Service and   (Search And Browse): 
+
+USE account_db
+GO
+CREATE TABLE user_info (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    firstName VARCHAR(50),
+    lastName VARCHAR(50),
+    email VARCHAR(100),
+    password VARCHAR(100),
+    phoneNumber VARCHAR(15)
+);
+
+3)Product Information Management System:
+CREATE DATABASE pim_db;
+CREATE TABLE seller (
+  id INT PRIMARY KEY,
+  seller_name VARCHAR(100),
+  contact_name VARCHAR(100),
+  email VARCHAR(100),
+  phone_number VARCHAR(20),
+  address_line1 VARCHAR(255),
+  address_line2 VARCHAR(255),
+  city VARCHAR(100),
+  state VARCHAR(100),
+  zip_code VARCHAR(20),
+  country VARCHAR(100)
+);
+
+CREATE TABLE product (
+  product_id INT IDENTITY(1,1) PRIMARY KEY,
+  sku VARCHAR(50) UNIQUE,
+  name VARCHAR(100),
+  category_id INT,
+  status VARCHAR(20),
+  last_modified_date DATETIME DEFAULT GETDATE(),
+  seller_id INT,
+  FOREIGN KEY (category_id) REFERENCES category(category_id),
+  FOREIGN KEY (seller_id) REFERENCES seller(id)
+);
+
+CREATE TABLE product_attributes (
+  sku VARCHAR(50) PRIMARY KEY,
+  product_id INT,
+  size VARCHAR(50),
+  product_image VARCHAR(1000),
+  FOREIGN KEY (product_id) REFERENCES product(product_id)
+);
+
+CREATE TABLE product_category (
+  id INT IDENTITY(1,1) PRIMARY KEY,
+  category_id INT NOT NULL,
+  sku VARCHAR(50),
+  price DECIMAL(10,2),
+  discount INT,
+  FOREIGN KEY (sku) REFERENCES product_attributes(sku),
+  FOREIGN KEY (category_id) REFERENCES category(category_id)
+);
+
+
+4)Order Management System:
+use oms_db;
+go
+
+
+CREATE TABLE orders (
+    id INT PRIMARY KEY IDENTITY,
+    user_id INT NOT NULL,
+    order_date DATETIME,
+    order_status VARCHAR(50),          --   "Pending", "Shipped", "Delivered"
+    order_total DECIMAL(10, 2)
+);
+
+
+CREATE TABLE order_items (
+    id INT PRIMARY KEY IDENTITY,
+    order_id INT,
+    product_id INT NOT NULL,
+    sku VARCHAR(50),
+    quantity INT,
+    unit_price DECIMAL(10,2),
+    discount DECIMAL(10,2),
+    final_price DECIMAL(10,2),
+    size VARCHAR(20),
+    color VARCHAR(30),
+    status VARCHAR(50),  -- e.g., Ordered, Cancelled, Returned
+	seller_id INT NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id),
+);
+
+
+
+
+
+CREATE TABLE order_invoice (
+    id INT PRIMARY KEY IDENTITY,
+    order_id INT,
+    invoice_number VARCHAR(100),
+    invoice_date DATETIME,
+    payment_mode VARCHAR(50),         --  "Credit Card", "UPI", "COD"
+    invoice_amount DECIMAL(10, 2),
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
+
+CREATE TABLE shipments (
+    id INT PRIMARY KEY IDENTITY,
+    order_id INT,
+    shipment_status VARCHAR(50),       -- e.g., "In Transit", "Delivered"
+    shipment_tracking_id VARCHAR(100),
+    shipment_date DATETIME,
+    delivered_date DATETIME,
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
+CREATE TABLE shipment_items (	
+    id INT PRIMARY KEY IDENTITY,
+    shipment_id INT,
+    order_item_id INT,
+    item_status VARCHAR(50),           -- e.g., "In Transit", "Delivered"
+    FOREIGN KEY (shipment_id) REFERENCES shipments(id),
+    FOREIGN KEY (order_item_id) REFERENCES order_items(id)
+);
+
+
+
+
+CREATE TABLE order_returns (
+    id INT PRIMARY KEY IDENTITY,
+    order_item_id INT,
+    return_date DATETIME,
+    return_reason VARCHAR(255),
+    return_status VARCHAR(50), -- e.g., Requested, Approved, Rejected, Completed
+    refund_amount DECIMAL(10,2), 
+    FOREIGN KEY (order_item_id) REFERENCES order_items(id)
+);
+
+5)Inventory Management System:
+
+Create Database ims_db;
+GO
+ 
+USE ims_db;
+GO
+ 
+CREATE TABLE inventory (
+    inventory_id INT PRIMARY KEY IDENTITY(1,1),
+    sku VARCHAR(100) NOT NULL,            
+    location VARCHAR(100) NOT NULL,
+    available_quantity INT NOT NULL,
+ 
+    CONSTRAINT uq_sku_location UNIQUE (sku, location),
+);
+ 
+ 
+CREATE TABLE order_inventory (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    order_id INT NOT NULL,
+    sku VARCHAR(100) NOT NULL,           -- matches inventory.sku
+    location VARCHAR(100) NOT NULL,      -- matches inventory.location
+    reserved_quantity INT NOT NULL,
+    allocated_quantity INT NOT NULL,
+ 
+    CONSTRAINT fk_order_inventory_inventory FOREIGN KEY (sku, location)
+        REFERENCES inventory(sku, location)
+);
+
+6)CATALOG MANAGEMENT SYSTEM:
+
+Create database cms_db;
+GO
+USE cms_db;
+
+CREATE TABLE product_categories (
+
+    product_category_id INT PRIMARY KEY IDENTITY(1,1),  --AI
+    category_id INT,
+    sku VARCHAR(50) NOT NULL,
+    price INT,
+    discount FLOAT,
+    FOREIGN KEY (category_id) REFERENCES Categories(category_id),
+    FOREIGN KEY (sku) REFERENCES Product(sku)
+
+);
+ 
+CREATE TABLE Promo (
+    promo_type VARCHAR(100) NOT NULL,
+    promo_code VARCHAR(50) PRIMARY KEY,
+    description VARCHAR(100),
+    amount INT
+);
+CREATE TABLE PromotionProductJoin (
+    product_id INT,
+    promo_code VARCHAR(50),
+    FOREIGN KEY (product_id) REFERENCES Product(product_id),
+    FOREIGN KEY (promo_code) REFERENCES Promo(promo_code)
+);

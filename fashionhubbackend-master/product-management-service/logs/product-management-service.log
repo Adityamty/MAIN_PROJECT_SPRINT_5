@@ -1,0 +1,42 @@
+2025-07-12 02:13:31.137 [main] INFO  [c.n.p.ProductManagementServiceApplication] - Starting ProductManagementServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 24176 (C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\product-management-service\target\product-management-service-0.0.1-SNAPSHOT.jar started by hparichha in C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\product-management-service)
+2025-07-12 02:13:31.142 [main] INFO  [c.n.p.ProductManagementServiceApplication] - No active profile set, falling back to 1 default profile: "default"
+2025-07-12 02:13:34.035 [main] INFO  [o.s.cloud.context.scope.GenericScope] - BeanFactory id=27a93f9c-9531-3f5b-97ed-1e9349809ae0
+2025-07-12 02:13:34.246 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-07-12 02:13:34.250 [main] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-07-12 02:13:34.622 [main] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8081 (http)
+2025-07-12 02:13:34.690 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 3433 ms
+2025-07-12 02:13:36.426 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-12 02:13:36.639 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-12 02:13:36.732 [main] INFO  [o.h.c.i.RegionFactoryInitiator] - HHH000026: Second-level cache disabled
+2025-07-12 02:13:37.365 [main] WARN  [org.hibernate.orm.deprecation] - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-12 02:13:38.971 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-12 02:13:42.369 [main] INFO  [o.s.v.b.OptionalValidatorFactoryBean] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-12 02:13:44.827 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:46.097 [main] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-12 02:13:46.219 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@514ee14c description = 'Spring Boot [3.5.3] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2025-07-12 02:13:46.309 [main] ERROR [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.5.3] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+

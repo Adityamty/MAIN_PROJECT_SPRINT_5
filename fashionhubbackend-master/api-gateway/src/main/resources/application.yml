@@ -1,0 +1,147 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: user-service-user
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+
+        - id: user-service-test
+          uri: lb://user-service
+          predicates:
+            - Path=/test/**
+
+        - id: category-service
+          uri: lb://product-management-service
+          predicates:
+            - Path=/categories/**
+
+        - id: product-service-products
+          uri: lb://product-management-service
+          predicates:
+            - Path=/products/**
+
+        - id: product-service-sellers
+          uri: lb://product-management-service
+          predicates:
+            - Path=/sellers/**
+
+        # Inventory Service Routes
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/inventory/**
+
+        - id: inventory-service-items
+          uri: lb://inventory-service
+          predicates:
+            - Path=/items/**
+
+        # Cart & Checkout Service Routes
+        - id: cart-checkout-service-cart
+          uri: lb://cart-checkout-service
+          predicates:
+            - Path=/api/cart/**
+
+        - id: cart-checkout-service-checkout
+          uri: lb://cart-checkout-service
+          predicates:
+            - Path=/checkout/**
+
+        # Swagger Documentation Routes
+        - id: user-service-swagger
+          uri: lb://user-service
+          predicates:
+            - Path=/v3/api-docs/user-service
+          filters:
+            - RewritePath=/v3/api-docs/user-service, /v3/api-docs
+
+        - id: product-service-swagger
+          uri: lb://product-management-service
+          predicates:
+            - Path=/v3/api-docs/product-management-service
+          filters:
+            - RewritePath=/v3/api-docs/product-management-service, /v3/api-docs
+
+        - id: inventory-service-swagger
+          uri: lb://inventory-service
+          predicates:
+            - Path=/v3/api-docs/inventory-service
+          filters:
+            - RewritePath=/v3/api-docs/inventory-service, /v3/api-docs
+
+        - id: cart-checkout-service-swagger
+          uri: lb://cart-checkout-service
+          predicates:
+            - Path=/v3/api-docs/cart-checkout-service
+          filters:
+            - RewritePath=/v3/api-docs/cart-checkout-service, /v3/api-docs
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+# Comprehensive Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.nisum.apigateway: INFO
+    com.nisum.apigateway.config: DEBUG
+    org.springframework.cloud.gateway: INFO
+    org.springframework.cloud.netflix.eureka: WARN
+    # Silence noisy framework components
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    reactor.netty: WARN
+    io.netty: WARN
+    org.springframework.boot.autoconfigure: WARN
+    org.apache.catalina: WARN
+    # ELIMINATE HIKARIPOLL NOISE (if any)
+    com.zaxxer.hikari: ERROR
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}] - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}] - %msg%n"
+  file:
+    name: logs/api-gateway.log
+    max-size: 10MB
+    max-history: 30
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      total-size-cap: 1GB
+
+# Swagger/OpenAPI Configuration for API Gateway
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - url: /v3/api-docs/user-service
+        name: User Service
+        displayName: User Management API
+      - url: /v3/api-docs/product-management-service
+        name: Product Management Service
+        displayName: Product Management API
+      - url: /v3/api-docs/inventory-service
+        name: Inventory Service
+        displayName: Inventory Management API
+      - url: /v3/api-docs/cart-checkout-service
+        name: Cart & Checkout Service
+        displayName: Cart & Checkout API

@@ -1,0 +1,64 @@
+2025-07-15T14:27:24.364+05:30  INFO 20704 --- [product-management-service] [restartedMain] .n.p.ProductManagementServiceApplication : Starting ProductManagementServiceApplication using Java 17.0.2 with PID 20704 (C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\product-management-service\target\classes started by hparichha in C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND)
+2025-07-15T14:27:24.388+05:30  INFO 20704 --- [product-management-service] [restartedMain] .n.p.ProductManagementServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-07-15T14:27:24.767+05:30  INFO 20704 --- [product-management-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-15T14:27:24.769+05:30  INFO 20704 --- [product-management-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-15T14:27:27.728+05:30  INFO 20704 --- [product-management-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-15T14:27:28.025+05:30  INFO 20704 --- [product-management-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 278 ms. Found 3 JPA repository interfaces.
+2025-07-15T14:27:28.553+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d0a6aea5-90e1-3b64-a9fa-d272261dda27
+2025-07-15T14:27:29.429+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-07-15T14:27:29.444+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-15T14:27:29.444+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-15T14:27:29.538+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-15T14:27:29.538+05:30  INFO 20704 --- [product-management-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4767 ms
+2025-07-15T14:27:31.256+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-15T14:27:31.334+05:30  INFO 20704 --- [product-management-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-15T14:27:31.406+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-15T14:27:32.106+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-15T14:27:32.357+05:30  WARN 20704 --- [product-management-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-15T14:27:32.499+05:30  INFO 20704 --- [product-management-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-15T14:27:33.842+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-15T14:27:33.847+05:30  INFO 20704 --- [product-management-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-15T14:27:34.556+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-15T14:27:36.095+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-07-15T14:27:36.909+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-15T14:27:38.190+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-07-15T14:27:39.514+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-07-15T14:27:39.576+05:30  INFO 20704 --- [product-management-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-15T14:27:39.637+05:30  WARN 20704 --- [product-management-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-15T14:27:39.672+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-15T14:27:39.708+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-07-15T14:27:39.712+05:30  INFO 20704 --- [product-management-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-07-15T14:27:39.732+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-07-15T14:27:39.733+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-07-15T14:27:39.734+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-07-15T14:27:39.734+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-07-15T14:27:39.737+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-07-15T14:27:39.738+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-07-15T14:27:39.738+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-07-15T14:27:40.416+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-07-15T14:27:40.418+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-07-15T14:27:40.421+05:30  INFO 20704 --- [product-management-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-07-15T14:27:40.424+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1752569860423 with initial instances count: 0
+2025-07-15T14:27:40.429+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCT-MANAGEMENT-SERVICE with eureka with status UP
+2025-07-15T14:27:40.430+05:30  INFO 20704 --- [product-management-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1752569860430, current=UP, previous=STARTING]
+2025-07-15T14:27:40.433+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MANAGEMENT-SERVICE/localhost:product-management-service:8081: registering service...
+2025-07-15T14:27:40.507+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-07-15T14:27:40.508+05:30  INFO 20704 --- [product-management-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-07-15T14:27:40.670+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCT-MANAGEMENT-SERVICE/localhost:product-management-service:8081 - registration status: 204
+2025-07-15T14:27:41.799+05:30  INFO 20704 --- [product-management-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-07-15T14:27:41.853+05:30  INFO 20704 --- [product-management-service] [restartedMain] .n.p.ProductManagementServiceApplication : Started ProductManagementServiceApplication in 19.736 seconds (process running for 23.391)
+2025-07-15T14:28:10.436+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-07-15T14:28:10.443+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-07-15T14:28:10.449+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-07-15T14:28:10.451+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-07-15T14:28:10.452+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-07-15T14:28:10.459+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-07-15T14:28:10.459+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-07-15T14:28:10.526+05:30  INFO 20704 --- [product-management-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200

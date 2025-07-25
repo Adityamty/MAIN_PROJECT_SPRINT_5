@@ -1,0 +1,81 @@
+server:
+  port: 8081
+  # Optimize server performance
+  tomcat:
+    threads:
+      max: 200
+      min-spare: 10
+    connection-timeout: 30000
+    max-connections: 8192
+
+spring:
+  application:
+    name: product-management-service
+  cloud:
+    compatibility-verifier:
+      enabled: false
+  datasource:
+    url: jdbc:sqlserver://BT-22053657:1433;databaseName=pim_db;encrypt=true;trustServerCertificate=true
+    username: root1
+    password: Aditya@2003
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    # Connection pool optimizations
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      leak-detection-threshold: 60000
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.SQLServerDialect
+      # Hibernate performance optimizations
+      hibernate.jdbc.batch_size: 25
+      hibernate.jdbc.fetch_size: 50
+      hibernate.order_inserts: true
+      hibernate.order_updates: true
+      hibernate.jdbc.batch_versioned_data: true
+      hibernate.connection.provider_disables_autocommit: true
+    # JPA optimizations
+    show-sql: false
+    open-in-view: false
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+# Swagger Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.nisum.productmanagement: INFO
+    org.springframework.security: WARN
+    org.springframework.web: WARN
+    org.hibernate.SQL: WARN
+    org.hibernate.type.descriptor.sql.BasicBinder: WARN
+    com.zaxxer.hikari: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/product-management-service.log
+    max-size: 10MB
+    max-history: 30
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      total-size-cap: 1GB

@@ -1,0 +1,38 @@
+2025-07-15 14:29:17.896 [restartedMain] INFO  [c.n.U.UserServiceApplication] - Starting UserServiceApplication using Java 17.0.2 with PID 22772 (C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND\UserService\target\classes started by hparichha in C:\Users\hparichha\IdeaProjects\FRONTEND + BACKEND\BACKEND)
+2025-07-15 14:29:17.917 [restartedMain] INFO  [c.n.U.UserServiceApplication] - No active profile set, falling back to 1 default profile: "default"
+2025-07-15 14:29:18.109 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-15 14:29:18.110 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-15 14:29:22.231 [restartedMain] INFO  [o.s.cloud.context.scope.GenericScope] - BeanFactory id=5ef12df9-a1f8-3169-bd41-a79472cadd29
+2025-07-15 14:29:22.653 [restartedMain] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-07-15 14:29:22.658 [restartedMain] WARN  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-07-15 14:29:23.664 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8084 (http)
+2025-07-15 14:29:23.865 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 5754 ms
+2025-07-15 14:29:25.133 [restartedMain] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-15 14:29:25.232 [restartedMain] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-07-15 14:29:25.305 [restartedMain] INFO  [o.h.c.i.RegionFactoryInitiator] - HHH000026: Second-level cache disabled
+2025-07-15 14:29:26.017 [restartedMain] WARN  [org.hibernate.orm.deprecation] - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-15 14:29:27.736 [restartedMain] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-15 14:29:28.505 [restartedMain] WARN  [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-15 14:29:29.653 [restartedMain] WARN  [o.s.b.d.a.OptionalLiveReloadServer] - Unable to start LiveReload server
+2025-07-15 14:29:30.929 [restartedMain] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-15 14:29:32.232 [restartedMain] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-15 14:29:32.346 [restartedMain] WARN  [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-15 14:29:32.450 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Initializing Eureka in region us-east-1
+2025-07-15 14:29:32.466 [restartedMain] INFO  [c.n.d.s.r.aws.ConfigClusterResolver] - Resolving eureka endpoints via configuration
+2025-07-15 14:29:32.488 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Disable delta property : false
+2025-07-15 14:29:32.489 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Single vip registry refresh property : null
+2025-07-15 14:29:32.489 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Force full registry fetch : false
+2025-07-15 14:29:32.489 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Application is null : false
+2025-07-15 14:29:32.489 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Registered Applications size is zero : true
+2025-07-15 14:29:32.489 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Application version is -1: true
+2025-07-15 14:29:32.489 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Getting all instance registry info from the eureka server
+2025-07-15 14:29:33.095 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - The response status is 200
+2025-07-15 14:29:33.097 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Starting heartbeat executor: renew interval is: 30
+2025-07-15 14:29:33.101 [restartedMain] INFO  [c.n.discovery.InstanceInfoReplicator] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-07-15 14:29:33.104 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Discovery Client initialized at timestamp 1752569973103 with initial instances count: 3
+2025-07-15 14:29:33.111 [restartedMain] INFO  [c.netflix.discovery.DiscoveryClient] - Saw local status change event StatusChangeEvent [timestamp=1752569973111, current=UP, previous=STARTING]
+2025-07-15 14:29:33.114 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [c.netflix.discovery.DiscoveryClient] - DiscoveryClient_USER-SERVICE/localhost:user-service:8084: registering service...
+2025-07-15 14:29:33.181 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  [c.netflix.discovery.DiscoveryClient] - DiscoveryClient_USER-SERVICE/localhost:user-service:8084 - registration status: 204
+2025-07-15 14:29:33.195 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8084 (http) with context path '/'
+2025-07-15 14:29:34.469 [restartedMain] INFO  [o.s.cloud.commons.util.InetUtils] - Cannot determine local hostname
+2025-07-15 14:29:34.500 [restartedMain] INFO  [c.n.U.UserServiceApplication] - Started UserServiceApplication in 18.858 seconds (process running for 21.077)

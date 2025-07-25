@@ -1,0 +1,45 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+
+# Comprehensive Logging Configuration for Eureka Server
+logging:
+  level:
+    root: INFO
+    com.nisum.eurekaserver: INFO
+    com.netflix.eureka: WARN
+    com.netflix.discovery: WARN
+    org.springframework.cloud.netflix.eureka: WARN
+    # Silence noisy framework components
+    org.springframework.web: WARN
+    org.springframework.security: WARN
+    org.springframework.boot.autoconfigure: WARN
+    org.apache.catalina: WARN
+    org.apache.tomcat: WARN
+    # ELIMINATE HIKARIPOLL NOISE (if any)
+    com.zaxxer.hikari: ERROR
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}] - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{36}] - %msg%n"
+  file:
+    name: logs/eureka-server.log
+    max-size: 10MB
+    max-history: 30
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      total-size-cap: 1GB

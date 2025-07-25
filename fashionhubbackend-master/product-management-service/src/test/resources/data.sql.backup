@@ -1,0 +1,24 @@
+-- Test data for integration tests
+INSERT INTO categories (id, name, description, status, created_date, last_modified_date) VALUES
+(1, 'Electronics', 'Electronic devices and gadgets', 'Active', NOW(), NOW()),
+(2, 'Clothing', 'Apparel and fashion items', 'Active', NOW(), NOW()),
+(3, 'Books', 'Books and publications', 'Inactive', NOW(), NOW());
+
+INSERT INTO sellers (id, name, email, phone, address, status, created_date, last_modified_date) VALUES
+(101, 'Tech Store', 'tech@store.com', '123-456-7890', '123 Tech Street', 'Active', NOW(), NOW()),
+(102, 'Fashion Hub', 'fashion@hub.com', '987-654-3210', '456 Fashion Ave', 'Active', NOW(), NOW()),
+(103, 'Book World', 'books@world.com', '555-123-4567', '789 Book Lane', 'Inactive', NOW(), NOW());
+
+INSERT INTO products (id, name, category_id, seller_id, status, last_modified_date) VALUES
+(1, 'Smartphone', 1, 101, 'Active', NOW()),
+(2, 'Laptop', 1, 101, 'Active', NOW()),
+(3, 'T-Shirt', 2, 102, 'Active', NOW()),
+(4, 'Java Programming Book', 3, 103, 'Inactive', NOW());
+
+INSERT INTO product_attributes (id, product_id, sku, size, color, price, quantity) VALUES
+(1, 1, 'PHONE-001', 'Standard', 'Black', 599.99, 50),
+(2, 1, 'PHONE-002', 'Standard', 'White', 599.99, 30),
+(3, 2, 'LAPTOP-001', '15-inch', 'Silver', 1299.99, 20),
+(4, 3, 'SHIRT-001', 'M', 'Blue', 29.99, 100),
+(5, 3, 'SHIRT-002', 'L', 'Red', 29.99, 75),
+(6, 4, 'BOOK-001', 'Standard', 'N/A', 49.99, 25);

@@ -1,0 +1,18 @@
+# DevTools Configuration for Enhanced Development Experience
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java,src/main/resources
+      additional-exclude: static/**,public/**
+      poll-interval: 1s
+      quiet-period: 400ms
+    livereload:
+      enabled: true
+      port: 35731
+    add-properties: true
+  web:
+    resources:
+      cache:
+        period: 0
+

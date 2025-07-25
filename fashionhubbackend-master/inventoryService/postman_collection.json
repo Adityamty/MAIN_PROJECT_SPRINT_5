@@ -1,0 +1,148 @@
+{
+  "info": {
+    "name": "InventoryService API",
+    "description": "Postman collection for InventoryService backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Inventory",
+      "item": [
+        {
+          "name": "Add Inventory (DAO)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"availableQty\": 0\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/inventory", "host": ["{{base_url}}"], "path": ["api", "inventory"] }
+          }
+        },
+        {
+          "name": "Add Inventory (DTO)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"name\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/inventory/add", "host": ["{{base_url}}"], "path": ["api", "inventory", "add"] }
+          }
+        },
+        {
+          "name": "Get All Inventory",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/inventory/all", "host": ["{{base_url}}"], "path": ["api", "inventory", "all"] } }
+        },
+        {
+          "name": "Update Inventory",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"availableQty\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/inventory/{{id}}", "host": ["{{base_url}}"], "path": ["api", "inventory", "{{id}}"] }
+          }
+        },
+        {
+          "name": "Delete Inventory",
+          "request": { "method": "DELETE", "url": { "raw": "{{base_url}}/api/inventory/{{id}}", "host": ["{{base_url}}"], "path": ["api", "inventory", "{{id}}"] } }
+        },
+        {
+          "name": "Reserve Inventory",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/inventory/reserve", "host": ["{{base_url}}"], "path": ["api", "inventory", "reserve"] }
+          }
+        },
+        {
+          "name": "Get Available Quantity",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/inventory/available/{{sku}}", "host": ["{{base_url}}"], "path": ["api", "inventory", "available", "{{sku}}"] } }
+        },
+        {
+          "name": "Get Active Inventory",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/inventory/active", "host": ["{{base_url}}"], "path": ["api", "inventory", "active"] } }
+        },
+        {
+          "name": "Adjust Inventory",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/inventory/adjust", "host": ["{{base_url}}"], "path": ["api", "inventory", "adjust"] }
+          }
+        },
+        {
+          "name": "Cancel Adjust Inventory",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/inventory/adjust/cancel", "host": ["{{base_url}}"], "path": ["api", "inventory", "adjust", "cancel"] }
+          }
+        },
+        {
+          "name": "Get All Adjusted Inventory",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/inventory/adjust/all", "host": ["{{base_url}}"], "path": ["api", "inventory", "adjust", "all"] } }
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/orders", "host": ["{{base_url}}"], "path": ["api", "orders"] }
+          }
+        },
+        {
+          "name": "Get Order by Id",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/orders/{{id}}", "host": ["{{base_url}}"], "path": ["api", "orders", "{{id}}"] } }
+        },
+        {
+          "name": "Get All Orders",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/orders", "host": ["{{base_url}}"], "path": ["api", "orders"] } }
+        },
+        {
+          "name": "Update Order",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/orders/{{id}}", "host": ["{{base_url}}"], "path": ["api", "orders", "{{id}}"] }
+          }
+        },
+        {
+          "name": "Delete Order",
+          "request": { "method": "DELETE", "url": { "raw": "{{base_url}}/api/orders/{{id}}", "host": ["{{base_url}}"], "path": ["api", "orders", "{{id}}"] } }
+        },
+        {
+          "name": "Reserve Inventory for Order",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"sku\": \"string\",\n  \"quantity\": 0\n}" },
+            "url": { "raw": "{{base_url}}/api/orders/reserve", "host": ["{{base_url}}"], "path": ["api", "orders", "reserve"] }
+          }
+        },
+        {
+          "name": "Get Active Orders",
+          "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/orders/active", "host": ["{{base_url}}"], "path": ["api", "orders", "active"] } }
+        },
+        {
+          "name": "Allocate Order",
+          "request": { "method": "PUT", "url": { "raw": "{{base_url}}/api/orders/allocate/{{orderId}}", "host": ["{{base_url}}"], "path": ["api", "orders", "allocate", "{{orderId}}"] } }
+        },
+        {
+          "name": "Cancel Order",
+          "request": { "method": "PUT", "url": { "raw": "{{base_url}}/api/orders/cancel/{{orderId}}", "host": ["{{base_url}}"], "path": ["api", "orders", "cancel", "{{orderId}}"] } }
+        }
+      ]
+    }
+  ]
+}
+

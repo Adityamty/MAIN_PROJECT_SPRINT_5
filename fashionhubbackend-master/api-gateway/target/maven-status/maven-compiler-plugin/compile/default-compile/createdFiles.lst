@@ -1,0 +1,4 @@
+com\nisum\apigateway\ApiGatewayApplication.class
+com\nisum\apigateway\config\CorsConfig.class
+com\nisum\apigateway\util\GatewayLoggingUtil.class
+com\nisum\apigateway\config\SwaggerConfig.class
